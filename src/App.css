@@ -1,0 +1,270 @@
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-navbar {
+  min-height: 58px;
+}
+
+.navbar-brand {
+  margin-right: 1.5rem;
+  font-size: 1.15rem;
+}
+
+.navbar-nav {
+  gap: 0.2rem;
+}
+
+.navbar-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.settings-link {
+  white-space: nowrap;
+}
+
+.search-form {
+  gap: 0.35rem;
+}
+
+.search-form .form-control {
+  width: 150px;
+}
+
+.page-container {
+  flex: 1;
+  padding-top: 0.6rem;
+  padding-bottom: 0.8rem;
+}
+
+.portal-breadcrumb {
+  background: #343a40;
+  border-radius: 0.25rem;
+  padding: 0.65rem 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.portal-breadcrumb .breadcrumb {
+  color: #f8f9fa;
+}
+
+.portal-breadcrumb .breadcrumb-item,
+.portal-breadcrumb .breadcrumb-item.active {
+  color: #f8f9fa;
+}
+
+.portal-breadcrumb .breadcrumb-item a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.portal-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: #adb5bd;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.page-heading h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.add-student-button {
+  background: #273e78;
+  color: white;
+  border: 1px solid #273e78;
+  white-space: nowrap;
+}
+
+.add-student-button:hover {
+  background: #1e315f;
+  color: white;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 790px;
+  margin: 0 auto 0.8rem;
+}
+
+.student-card {
+  overflow: hidden;
+  border-color: #ddd;
+  box-shadow: 0 0.25rem 0.55rem rgba(0, 0, 0, 0.16);
+}
+
+.student-avatar {
+  height: 82px;
+  background: #c9c9cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.avatar-head {
+  width: 37px;
+  height: 43px;
+  background: #96969a;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.avatar-body {
+  width: 70px;
+  height: 36px;
+  background: #96969a;
+  border-radius: 50% 50% 0 0;
+  margin-top: 2px;
+  flex: 0 0 auto;
+}
+
+.student-card .card-body {
+  padding: 0.8rem 0.85rem 0.9rem;
+}
+
+.student-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.45rem;
+}
+
+.student-summary p,
+.student-extra-details p {
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.student-extra-details {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 0.6rem;
+  padding-top: 0.5rem;
+}
+
+.student-actions {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.7rem;
+}
+
+.student-actions .btn {
+  padding: 0.25rem 0.5rem;
+}
+
+.pagination {
+  margin: 0.8rem 0;
+}
+
+.portal-alert {
+  max-width: 810px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+}
+
+.alert-close {
+  color: #49646b;
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-left: 1rem;
+}
+
+.footer {
+  margin-top: auto;
+  background: #292b2e;
+  color: #f8f9fa;
+  padding: 1.25rem 0 0.6rem;
+}
+
+.footer-inner {
+  max-width: 810px;
+}
+
+.footer h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.35rem;
+}
+
+.footer a,
+.footer p {
+  display: block;
+  color: #f8f9fa;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  border-top: 1px solid #414347;
+  margin-top: 0.8rem;
+  padding-top: 0.6rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-tools {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0.5rem 0 0.75rem;
+  }
+
+  .search-form {
+    width: 100%;
+  }
+
+  .search-form .form-control {
+    width: 100%;
+  }
+
+  .student-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-grid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+
+  .portal-alert {
+    align-items: flex-start;
+  }
+}
